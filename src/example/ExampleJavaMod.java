@@ -3,7 +3,7 @@ package example;
 import arc.*;
 import arc.flabel.*;
 import arc.util.*;
-import arc.struct.Seq.*;
+import arc.struct.Seq;
 import mindustry.*;
 import mindustry.content.*;
 import mindustry.game.EventType.*;
@@ -19,7 +19,7 @@ public class ExampleJavaMod extends Mod{
 
         //listen for game load event
         Events.on(ClientLoadEvent.class, e -> {
-            messages.add("become funny", "seriously");
+            messages = Seq.with("become funny", "seriously");
             //show dialog upon startup
             Time.runTask(10f, () -> {
                 BaseDialog dialog = new BaseDialog("");
