@@ -1,4 +1,4 @@
-package example;
+package quote;
 
 import arc.*;
 import arc.flabel.*;
@@ -11,16 +11,16 @@ import mindustry.gen.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 
-public class ExampleJavaMod extends Mod{
+public class QuoteGenerator extends Mod{
     public Seq<String> messages = new Seq<String>();
     
-    public ExampleJavaMod(){
+    public QuoteGenerator(){
         Log.info("Loaded Quote Generator constructor.");
 
-        //listen for game load event
+        // listen for game load event
         Events.on(ClientLoadEvent.class, e -> {
-            messages = Seq.with("become funny", "seriously");
-            //show dialog upon startup
+            messages = Seq.with("become funny", "seriously", "πed");
+            // show dialog upon startup
             Time.runTask(10f, () -> {
                 BaseDialog dialog = new BaseDialog("");
                 dialog.cont.add(messages.random()).row();
@@ -32,7 +32,7 @@ public class ExampleJavaMod extends Mod{
 
     @Override
     public void loadContent(){
-        Log.info("Loading some example content.");
+        Log.info("Loading some/none example content.");
     }
 
 }
