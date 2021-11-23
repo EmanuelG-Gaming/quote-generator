@@ -35,7 +35,7 @@ public class QuoteGenerator extends Mod{
                        messages.shuffle();
                        Log.info("Rerolled some messages.");
                    }).size(100f, 50f).margin(4f);
-                ).size(100f, 50f).margin(4f).padLeft(4f).center();
+                }).size(100f, 50f).margin(4f).padLeft(4f).center();
                 dialog.cont.button("Close", dialog::hide).size(100f, 50f).margin(4f).padLeft(4f);
                 
                 dialog.show();
