@@ -24,7 +24,7 @@ public class QuoteGenerator extends Mod{
             // show dialog upon startup
             Time.runTask(10f, () -> {
                 BaseDialog dialog = new BaseDialog("");
-                dialog.cont.label(() -> "").update(l => l.setText(messages.random()).row();
+                dialog.cont.label(() -> "").update(l -> l.setText(messages.random())).row();
                 dialog.cont.button("Reroll", messages.shuffle()).margin(4);
                 dialog.cont.button("Close", dialog::hide).margin(4).padLeft(4);
                 
