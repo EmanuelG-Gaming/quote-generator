@@ -9,6 +9,7 @@ import mindustry.content.*;
 import mindustry.game.EventType.*;
 import mindustry.gen.*;
 import mindustry.mod.*;
+import mindustry.ui.*; // ~~is this necessary?~~
 import mindustry.ui.dialogs.*;
 
 public class QuoteGenerator extends Mod{
@@ -23,8 +24,10 @@ public class QuoteGenerator extends Mod{
             // show dialog upon startup
             Time.runTask(10f, () -> {
                 BaseDialog dialog = new BaseDialog("");
-                dialog.cont.add(messages.random()).row();
-                dialog.cont.button("Hide", dialog::hide).size(100f, 50f);
+                dialog.cont.label(() -> "").update(l => l.setText(messages.random()).row();
+                dialog.cont.button("Reroll", messages.shuffle()).margin(4);
+                dialog.cont.button("Close", dialog::hide).margin(4).padLeft(4);
+                
                 dialog.show();
             });
         });
