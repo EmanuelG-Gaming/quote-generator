@@ -1,7 +1,7 @@
 package quote;
 
 import arc.*;
-import arc.flabel.*;
+//import arc.flabel.*;
 import arc.util.*;
 import arc.struct.Seq;
 import mindustry.*;
