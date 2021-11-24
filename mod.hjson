@@ -1,23 +1,8 @@
-#the mod name as displayed in-game
 displayName: "Quote Generator"
-
-#the internal name of your mod
-name: "guote-generator"
-
-#your name
+name: "quote-generator"
 author: "Emanuel G"
-
-#the fully qualified main class of the mod
 main: "quote.QuoteGenerator"
-
-#the mod description as seen in the mod dialog
-description: "~~Generates~~ some quotes upon game startup."
-
-#the mod version
+description: "A Work-In-Progress mod. Generates some random quotes upon game startup. Download from Actions."
 version: 0.2
-
-#the minimum game build required to run this mod
 minGameVersion: 129
-
-#this is a java mod
 java: true
