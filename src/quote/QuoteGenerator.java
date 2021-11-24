@@ -13,6 +13,7 @@ import mindustry.mod.*;
 import mindustry.ui.*; // ~~is this necessary?~~
 import mindustry.ui.dialogs.*;
 
+import static arc.Core.*;
 import static mindustry.Vars.*;
 
 public class QuoteGenerator extends Mod{
