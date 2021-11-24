@@ -61,9 +61,9 @@ public class QuoteGenerator extends Mod{
           );
           
           LoadedMod qGen = mods.locateMod("quote-generator");
-          gGen.meta.displayName = "Quote Generator";
-          gGen.meta.description = "A Work-In-Progress mod. Generates some random quotes upon game startup. Currently, there are " + messages.size + " different possible quotes.";
-          gGen.meta.author = "Emanuel G";
+          qGen.meta.displayName = "Quote Generator";
+          qGen.meta.description = "A Work-In-Progress mod. Generates some random quotes upon game startup. Currently, there are " + messages.size + " different possible quotes.";
+          qGen.meta.author = "Emanuel G";
         }
     }
     @Override

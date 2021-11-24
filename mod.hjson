@@ -2,7 +2,7 @@ displayName: "Quote Generator"
 name: "quote-generator"
 author: "Emanuel G"
 main: "quote.QuoteGenerator"
-description: "A Work-In-Progress mod. Generates some random quotes upon game startup. Download from Actions."
+description: "A Work-In-Progress mod. Generates some random quotes upon game startup. Download from a successful Action."
 version: 0.2
 minGameVersion: 129
 java: true
