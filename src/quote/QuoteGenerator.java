@@ -22,12 +22,21 @@ public class QuoteGenerator extends Mod{
         // listen for game load event
         Events.on(ClientLoadEvent.class, e -> {
             int index = 0;
-            messages = Seq.with("become funny", "seriously", "πed");
+            messages = Seq.with(
+               "Become funny.", 
+               "Seriously.", 
+               "πed",
+               "If you belong to a vermin-like underclass of spoiled children, don't be spoiled, please.",
+               "Focus on better things than worshipping the poorly-made quotes on the internet.",
+               "Duh.",
+               "Fun fact: you can Reroll this message to a random one. May also have the chance of landing on the same message.",
+               "DoN't Be AfRaId, Antumbra will add more quotes."
+            );
             
             // show dialog upon startup
             Time.runTask(10f, () -> {
                 BaseDialog dialog = new BaseDialog("Quote Gen");
-                dialog.cont.labelWrap(() -> messages.get(index)).update(l -> l.setText(messages.get(index))).size(1000f, 100f).padBottom(8f).row();
+                dialog.cont.labelWrap(() -> messages.random()).update(l -> l.setText(messages.get(index))).size(1000f, 100f).padBottom(8f).row();
                 dialog.cont.image(Core.atlas.find("whiteui")).color(Pal.gray).size(1000f, 3.50f).padTop(96f).row();
                 
                 dialog.cont.table(Styles.none, t -> {
