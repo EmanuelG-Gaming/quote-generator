@@ -5,7 +5,6 @@ import arc.*;
 import arc.util.*;
 import arc.struct.Seq;
 import mindustry.*;
-import mindustry.Core.*;
 import mindustry.graphics.Pal;
 import mindustry.content.*;
 import mindustry.game.EventType.*;
@@ -19,7 +18,6 @@ import static mindustry.Vars.*;
 public class QuoteGenerator extends Mod{
     public Seq<String> messages = new Seq<String>();
     public int discoveredQuotes = 0;
-    public @Nullable LoadedMod qGen;
     
     public QuoteGenerator(){
         Log.info("Loaded Quote Generator constructor.");
@@ -61,13 +59,6 @@ public class QuoteGenerator extends Mod{
             "Fun fact: you can Reroll this message to a random one. May also have the chance of landing on the same message.",
             "DoN't Be AfRaId, Antumbra will add more quotes."
           );
-          
-          Core.app.post(() -> {
-            qGen = mods.locateMod("quote-generator");
-            qGen.meta.displayName = "Quote Generator";
-            qGen.meta.description = "A Work-In-Progress mod. Generates some random quotes upon game startup. Currently, there are " + messages.size + " different possible quotes.";
-            qGen.meta.author = "Emanuel G";
-          });
         }
     }
     /*
