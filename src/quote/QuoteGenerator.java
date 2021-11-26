@@ -14,6 +14,7 @@ import mindustry.ui.*; // ~~is this necessary?~~
 import mindustry.ui.dialogs.*;
 
 import static mindustry.Vars.*;
+import static mindustry.Core.*;
 
 public class QuoteGenerator extends Mod{
     public Seq<String> messages = new Seq<String>();
@@ -61,10 +62,12 @@ public class QuoteGenerator extends Mod{
             "DoN't Be AfRaId, Antumbra will add more quotes."
           );
           
-          qGen = mods.locateMod("quote-generator");
-          qGen.meta.displayName = "Quote Generator";
-          qGen.meta.description = "A Work-In-Progress mod. Generates some random quotes upon game startup. Currently, there are " + messages.size + " different possible quotes.";
-          qGen.meta.author = "Emanuel G";
+          app.post(() -> {
+            qGen = mods.locateMod("quote-generator");
+            qGen.meta.displayName = "Quote Generator";
+            qGen.meta.description = "A Work-In-Progress mod. Generates some random quotes upon game startup. Currently, there are " + messages.size + " different possible quotes.";
+            qGen.meta.author = "Emanuel G";
+          });
         }
     }
     /*
