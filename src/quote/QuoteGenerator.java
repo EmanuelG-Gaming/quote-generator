@@ -18,7 +18,7 @@ import static mindustry.Vars.*;
 public class QuoteGenerator extends Mod{
     public Seq<String> messages = new Seq<String>();
     public int discoveredQuotes = 0;
-    public static LoadedMod loadedMod;
+    public @Nullable LoadedMod qGen;
     
     public QuoteGenerator(){
         Log.info("Loaded Quote Generator constructor.");
@@ -61,15 +61,17 @@ public class QuoteGenerator extends Mod{
             "DoN't Be AfRaId, Antumbra will add more quotes."
           );
           
-          loadedMod = mods.locateMod("quote-generator");
-          loadedMod.meta.displayName = "Quote Generator";
-          loadedMod.meta.description = "A Work-In-Progress mod. Generates some random quotes upon game startup. Currently, there are " + messages.size + " different possible quotes.";
-          loadedMod.meta.author = "Emanuel G";
+          qGen = mods.locateMod("quote-generator");
+          qGen.meta.displayName = "Quote Generator";
+          qGen.meta.description = "A Work-In-Progress mod. Generates some random quotes upon game startup. Currently, there are " + messages.size + " different possible quotes.";
+          qGen.meta.author = "Emanuel G";
         }
     }
+    /*
     @Override
     public void loadContent(){
         Log.info("Loading some/none example content.");
     }
+    */
 
 }
